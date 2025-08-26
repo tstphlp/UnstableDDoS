@@ -230,7 +230,7 @@ def inforgeget():
 			final = base + links                                   
 			result = urllib.request.urlopen(final)                 
 			for line in result :
-				ip = re.findall("(?:[\d]{1,3})\.(?:[\d]{1,3})\.(?:[\d]{1,3})\.(?:[\d]{1,3}):(?:[\d]{1,5})", str(line)) 
+				ip = re.findall(r"(?:\d{1,3})\.(?:\d{1,3})\.(?:\d{1,3})\.(?:\d{1,3}):(?:\d{1,5})", str(line)) 
 				if ip: 
 					for x in ip:
 						out_file = open("proxy.txt","a") 
